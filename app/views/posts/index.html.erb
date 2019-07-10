@@ -10,3 +10,12 @@
         </div>
     </div>
 </div>
+
+<% @posts.each do |post| %>
+    <div class="row">
+        <div class="container-news col-xs-12 col-sm-6 col-md-4 ">
+            <p><span>ツイート内容: </span><%=link_to post.title, post_path(post.id) %></p>
+        </div>
+    </div>
+<% end %>
+       

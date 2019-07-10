@@ -12,6 +12,8 @@
                  <li class="list-inline-item"><%= link_to 'プロフィール変更', edit_user_registration_path %></li>
                  <li class="list-inline-item"><%= link_to "Help",   '#' %></li>
                  <li class="list-inline-item"> <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+                 <li class="list-inline-item">  <%= link_to "新規投稿", new_post_path %></li>
+                  
             </ul>
           <% else %>
             <ul class="list-inline navbar-right ">

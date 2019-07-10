@@ -6,6 +6,7 @@ class User < ApplicationRecord
   :confirmable, :lockable, :timeoutable, :omniauthable, omniauth_providers: [:twitter]
 
 
+  has_many :posts
 #   self.from_omniauthではuidとproviderで検索してあったらそれを、無かったらレコードを作ります。
 # self.new_with_sessionについては、もしこのメソッドを追加しておかなければ、Twitter認証後サインアップページで登録を行っても、
 # 認証情報として取ってきたuidやproviderなどが登録されません。

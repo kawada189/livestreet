@@ -1,2 +1,19 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+
+<%= form_for @post do |f| %>
+  <p>
+    <%= f.label :title,"ツイート" %>
+    <%= f.text_field :title %>
+  </p>
+  <%= f.submit %>
+<% end %>
+<%
+=begin%>
+ 
+   t.float :user_id
+      t.string :title
+      t.string :event_date
+      t.time :start_time
+      t.time :end_time
+      t.text :contents 
+<%
+=end%>
