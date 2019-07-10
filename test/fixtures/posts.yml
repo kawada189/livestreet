@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1.5
+  title: MyString
+  event_date: MyString
+  start_time: 2019-07-09 16:16:25
+  end_time: 2019-07-09 16:16:25
+  contents: MyText
+
+two:
+  user_id: 1.5
+  title: MyString
+  event_date: MyString
+  start_time: 2019-07-09 16:16:25
+  end_time: 2019-07-09 16:16:25
+  contents: MyText
