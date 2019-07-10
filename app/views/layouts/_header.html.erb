@@ -1,12 +1,43 @@
-<header class="navbar navbar-fixed-top navbar-dark bg-dark">
+
+ <header class="navbar navbar-fixed-top navbar-dark bg-dark">
   <div class="container">
-    <%= link_to "sample app", '#', id: "logo" %>
+    <%= link_to "LiveStreet", root_path , id: "logo" %>
     <nav>
-      <ul class="list-inline navbar-right ">
-        <li class="list-inline-item"><%= link_to "新規登録",   '#' %></li>
-        <li class="list-inline-item"><%= link_to "Help",   '#' %></li>
-        <li class="list-inline-item"><%= link_to "ログイン", '#' %></li>
+      <ul >
+       
       </ul>
+          <% if user_signed_in? %>
+            <ul class="list-inline navbar-right ">
+                 <strong><%= link_to current_user.username, users_show_path %></strong>
+                 <li class="list-inline-item"><%= link_to 'プロフィール変更', edit_user_registration_path %></li>
+                 <li class="list-inline-item"><%= link_to "Help",   '#' %></li>
+                 <li class="list-inline-item"> <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+            </ul>
+          <% else %>
+            <ul class="list-inline navbar-right ">
+                 <li class="list-inline-item"><%= link_to "新規登録",  new_user_registration_path %></li>
+                 <li class="list-inline-item"><%= link_to "Help",   '#' %></li>
+                 <li class="list-inline-item"><%= link_to "ログイン", new_user_session_path%></li>
+            </ul>
+          <% end %>
     </nav>
   </div>
-</header>
+</header> 
+
+<%
+=begin%>
+  
+<header>
+            <nav>
+                <% if user_signed_in? %>
+                <strong><%= link_to current_user.username, users_show_path %></strong>
+                <%= link_to 'プロフィール変更', edit_user_registration_path %>
+                <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+            <% else %>
+                <%= link_to 'サインアップ', new_user_registration_path %>
+                <%= link_to 'ログイン', new_user_session_path %>
+                <% end %>
+            </nav>
+        </header>  
+<%
+=end%>

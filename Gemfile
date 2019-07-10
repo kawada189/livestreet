@@ -32,10 +32,11 @@ gem 'devise'
 gem 'dotenv-rails' #後で使う
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-
+gem 'toastr-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem "jquery-rails"
+gem 'jquery-turbolinks'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 

@@ -1,12 +1,8 @@
 Rails.application.routes.draw do
-  
-resources :posts
-root 'posts#index'
-  # get 'posts/index'
-  # get 'posts/show'
-  # get 'posts/new'
-  # get 'posts/create'
-  # get 'posts/destroy'
-  # get 'posts/update'
+  devise_for :users, controllers: { :omniauth_callbacks => "omniauth_callbacks" }
+  get 'users/show'
+
+  resources :posts
+  root 'posts#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
