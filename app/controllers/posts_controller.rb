@@ -6,6 +6,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @user = @post.user
   end
 
   def new
@@ -27,7 +28,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:title) # tweetモデルのカラムのみを許可
+    params.require(:post).permit(:title, :event_date, :start_time, :end_time, :contents) 
   end
 
 end

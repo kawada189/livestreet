@@ -1,5 +1,8 @@
+@import "font-awesome";
 @import "bootstrap"; 
+@import "tempusdominus-bootstrap-4.css";
 @import "toastr"; 
+
 /*header-----------------------------------*/
 
 /*index--------------------------------------*/
@@ -23,5 +26,11 @@
 .container-news{
     background-color: burlywood;
     
+}
+
+/*posts:show-----------------------------------------*/
+#mapid {
+    height: 300px;
+    width: 300px
 }
 

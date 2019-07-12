@@ -11,11 +11,14 @@
     </div>
 </div>
 
-<% @posts.each do |post| %>
-    <div class="row">
+<div class="row">
+    <% @posts.each do |post| %>
         <div class="container-news col-xs-12 col-sm-6 col-md-4 ">
-            <p><span>ツイート内容: </span><%=link_to post.title, post_path(post.id) %></p>
+            <p><span><%=link_to post.user.username, post_path(post.id) %>: </span><%=link_to post.title, post_path(post.id) %></p>
+            <p><span>イベント日時: </span><%=link_to post.event_date.strftime('%Y年%m月%d日 %H:%M:%S'), post_path(post.id) %></p>
+            <p><span>内容: </span><%=link_to post.contents, post_path(post.id) %></p>
         </div>
-    </div>
-<% end %>
-       
+    <% end %>
+</div>  
+
+

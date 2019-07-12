@@ -10,17 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_10_083951) do
+ActiveRecord::Schema.define(version: 2019_07_11_142858) do
 
   create_table "posts", force: :cascade do |t|
     t.float "user_id"
     t.string "title"
-    t.string "event_date"
+    t.datetime "event_date"
     t.time "start_time"
     t.time "end_time"
     t.text "contents"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.decimal "map_lat", precision: 9, scale: 6
+    t.decimal "map_lon", precision: 9, scale: 6
   end
 
   create_table "users", force: :cascade do |t|

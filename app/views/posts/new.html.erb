@@ -1,9 +1,22 @@
 
 <%= form_for @post do |f| %>
   <p>
-    <%= f.label :title,"ツイート" %>
+    <%= f.label :title,"タイトル" %>
     <%= f.text_field :title %>
   </p>
+
+  <p>
+    <%= f.label :event_date,"イベント日時" %>
+    <%= f.datetime_select :event_date, use_month_numbers: true%>
+  </p>
+
+
+  <p>
+    <%= f.label :contents,"内容" %>
+    <%= f.text_area :contents %>
+  </p>
+
+
   <%= f.submit %>
 <% end %>
 <%
