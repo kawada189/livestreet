@@ -1,6 +1,3 @@
- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
- <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
-
 <%= form_for @post do |f| %>
   <p>
     <%= f.label :title,"タイトル" %>
@@ -12,13 +9,79 @@
     <%= f.datetime_select :event_date, use_month_numbers: true%>
   </p>
 
+ <div class="field">
+    <%= f.label :place, "都道府県" %><br>
+    <%= f.select :place, {
+    '北海道'=>'北海道',
+    '青森県'=>'青森県',
+    '岩手県'=>'岩手県',
+    '宮城県'=>'宮城県',
+    '秋田県'=>'秋田県',
+    '山形県'=>'山形県',
+    '福島県'=>'福島県',
+    '茨城県'=>'茨城県',
+    '栃木県'=>'栃木県',
+    '群馬県'=>'群馬県',
+    '埼玉県'=>'埼玉県',
+    '千葉県'=>'千葉県',
+    '東京都'=>'東京都',
+    '神奈川県'=>'神奈川県',
+    '新潟県'=>'新潟県',
+    '富山県'=>'富山県',
+    '石川県'=>'石川県',
+    '福島県'=>'福井県',
+    '山梨県'=>'山梨県',
+    '長野県'=>'長野県',
+    '岐阜県'=>'岐阜県',
+    '静岡県'=>'静岡県',
+    '愛知県'=>'愛知県',
+    '三重県'=>'三重県',
+    '滋賀県'=>'滋賀県',
+    '京都府'=>'京都府',
+    '大阪府'=>'大阪府',
+    '兵庫県'=>'兵庫県',
+    '奈良県'=>'奈良県',
+    '和歌山県'=>'和歌山県',
+    '鳥取県'=>'鳥取県',
+    '島根県'=>'島根県',
+    '岡山県'=>'岡山県',
+    '広島県'=>'広島県',
+    '山口県'=>'山口県',
+    '徳島県'=>'徳島県',
+    '香川県'=>'香川県',
+    '愛媛県'=>'愛媛県',
+    '高知県'=>'高知県',
+    '福岡県'=>'福岡県',
+    '佐賀県'=>'佐賀県',
+    '長崎県'=>'長崎県',
+    '熊本県'=>'熊本県',
+    '大分県'=>'大分県',
+    '宮崎県'=>'宮崎県',
+    '鹿児島県'=>'鹿児島県',
+    '沖縄県'=>'沖縄県'}  %>
+  </div>
+ 
+  <div class="field">
+    <%= f.label :genre, "ジャンル" %><br>
+    <%= f.select :genre, {
+      'ジャズ'=>'ジャズ',
+      '弾き語り'=>'弾き語り',
+      '大道芸'=>'大道芸',
+      'ダンス'=>'ダンス',
+      'ラップ'=>'ラップ',
+      'ユニーク'=>'ユニーク'} %>
+  </div>
+<div class="map_container">
+<p>詳しい会場位置（マップをクリック）</p>
  <div id="map"></div>
-  <style type="text/css">
+ <style type="text/css">
     #map {
       height:300px;
       width:300px;
     }
   </style>
+ </div>
+  
 
   <div class="field">
     <%= f.label :map_lat,"緯度" %><br>
@@ -65,6 +128,7 @@ $(function(){
      document.getElementById('map_latitude').value = lat;
      document.getElementById('map_longitude').value = lon;
 });
+
 });
 
   </script>

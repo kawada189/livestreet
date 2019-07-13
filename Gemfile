@@ -15,8 +15,13 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
-gem 'bootstrap', '~> 4.1.1'
-gem "bootstrap4-datetime-picker-rails"
+gem 'bootstrap4-datetime-picker-rails'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap'
+  gem 'rails-assets-bootstrap-timepicker'#今回は関係ないですがおすすめです
+  gem 'rails-assets-bootstrap-tagsinput'
+  end
 gem 'momentjs-rails'
 gem "font-awesome-rails"
 # Use CoffeeScript for .coffee assets and views
@@ -40,8 +45,11 @@ gem 'toastr-rails'
 # gem 'capistrano-rails', group: :development
 gem "jquery-rails"
 gem 'jquery-turbolinks'
+gem 'jquery-ui-rails'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+
+gem 'acts-as-taggable-on', '~> 6.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -12,14 +12,17 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require bootstrap
-//= require moment
-//= require moment/ja.js
-//= require tempusdominus-bootstrap-4.js
 //= require jquery
 //= require jquery_ujs
-//= require jquery.turbolinks
+//= require bootstrap 
+//= require bootstrap-timepicker/bootstrap-timepicker 
+//= require bootstrap-tagsinput.min
+//= require bootstrap-tagsinput 
 //= require turbolinks
 //= require toastr
-//= require leaflet    
+//= require moment
+//= require moment/ja.js
+//= require leaflet
 //= require_tree .
+
+

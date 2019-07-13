@@ -26,9 +26,10 @@ class PostsController < ApplicationController
   def update
   end
 
+
   private
   def post_params
-    params.require(:post).permit(:title, :event_date, :start_time, :end_time, :contents) 
+    params.require(:post).permit(:title, :event_date, :start_time, :end_time, :contents, :skill_list, :interest_list,:place,:genre) 
   end
 
 end
