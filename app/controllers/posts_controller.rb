@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
   def index
-    @posts = Post.all 
+    @posts = Post.search(params[:search])
   end
 
   def show
@@ -25,6 +25,7 @@ class PostsController < ApplicationController
 
   def update
   end
+
 
 
   private
