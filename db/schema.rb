@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_14_085319) do
+ActiveRecord::Schema.define(version: 2019_07_14_123020) do
 
   create_table "posts", force: :cascade do |t|
     t.float "user_id"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2019_07_14_085319) do
     t.string "genre"
     t.string "picture"
     t.string "image"
+    t.datetime "event_at"
   end
 
   create_table "taggings", force: :cascade do |t|
