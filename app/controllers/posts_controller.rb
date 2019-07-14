@@ -10,12 +10,12 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new # 新規投稿用の空のインスタンス
+    @post = Post.new 
   end
 
   def create
-    @post = Post.new(post_params)  # フォームから送られてきたデータ(body)をストロングパラメータを経由して@tweetに代入
-    @post.user_id = current_user.id # user_idの情報はフォームからはきていないので、deviseのメソッドを使って「ログインしている自分のid」を代入
+    @post = Post.new(post_params)  
+    @post.user_id = current_user.id
     @post.save
     redirect_to posts_path
   end
@@ -29,7 +29,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:title, :event_date, :start_time, :end_time, :contents, :skill_list, :interest_list,:place,:genre) 
+    params.require(:post).permit(:title, :event_date, :start_time, :end_time, :contents, :skill_list, :interest_list,:place,:genre,:image,:picture) 
   end
 
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_13_104000) do
+ActiveRecord::Schema.define(version: 2019_07_14_085319) do
 
   create_table "posts", force: :cascade do |t|
     t.float "user_id"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 2019_07_13_104000) do
     t.decimal "map_lon", precision: 9, scale: 6
     t.string "place"
     t.string "genre"
+    t.string "picture"
+    t.string "image"
   end
 
   create_table "taggings", force: :cascade do |t|

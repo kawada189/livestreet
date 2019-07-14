@@ -19,6 +19,8 @@
             <p><span>場所: </span><%=link_to post.place, post_path(post.id) %></p>
             <p><span>ジャンル: </span><%=link_to post.genre, post_path(post.id) %></p>
             <p><span>内容: </span><%=link_to post.contents, post_path(post.id) %></p>
+            <p><span>サムネイル: </span><%=image_tag post.image.to_s %></p>
+            
             <%#= render 'posts/tag_list', tag_list: post.skill_list %>
         </div>
     <% end %>

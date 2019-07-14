@@ -98,6 +98,11 @@
     <%= f.text_area :contents %>
   </p>
 
+  <p>
+    <%= f.label :image,"サムネイル" %><br>
+    <%= f.file_field :image %>
+  </p>
+
 
   <%= f.submit %>
 <% end %>
