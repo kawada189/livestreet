@@ -16,7 +16,6 @@
 //= require jquery_ujs
 //= require bootstrap 
 //= require bootstrap-timepicker/bootstrap-timepicker 
-//= require bootstrap-tagsinput.min
 //= require bootstrap-tagsinput 
 //= require turbolinks
 //= require toastr
