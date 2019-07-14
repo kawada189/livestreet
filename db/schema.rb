@@ -10,12 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_14_123020) do
+ActiveRecord::Schema.define(version: 2019_07_14_124613) do
 
   create_table "posts", force: :cascade do |t|
     t.float "user_id"
     t.string "title"
-    t.datetime "event_date"
     t.time "start_time"
     t.time "end_time"
     t.text "contents"
