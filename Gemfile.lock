@@ -1,6 +1,5 @@
 GEM
   remote: https://rubygems.org/
-  remote: https://rails-assets.org/
   specs:
     actioncable (5.2.3)
       actionpack (= 5.2.3)
@@ -50,17 +49,18 @@ GEM
     archive-zip (0.12.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
+    autoprefixer-rails (9.6.1)
+      execjs
     bcrypt (3.1.13)
     bindex (0.8.1)
     bootsnap (1.4.4)
       msgpack (~> 1.0)
-    bootstrap4-datetime-picker-rails (0.3.1)
-      jquery-rails (~> 4.2, >= 4.2.0)
-      moment-timezone-rails (~> 1.0)
-      momentjs-rails (>= 2.10.5, <= 3.0.0)
+    bootstrap-sass (3.4.1)
+      autoprefixer-rails (>= 5.2.1)
+      sassc (>= 2.0.0)
     builder (3.2.3)
     byebug (11.0.1)
-    capybara (3.25.0)
+    capybara (3.26.0)
       addressable
       mini_mime (>= 0.1.3)
       nokogiri (~> 1.8)
@@ -157,8 +157,6 @@ GEM
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.11.3)
-    moment-timezone-rails (1.0.0)
-      momentjs-rails (>= 2.10.5, <= 3.0.0)
     momentjs-rails (2.20.1)
       railties (>= 3.1)
     msgpack (1.3.0)
@@ -199,11 +197,6 @@ GEM
       bundler (>= 1.3.0)
       railties (= 5.2.3)
       sprockets-rails (>= 2.0.0)
-    rails-assets-bootstrap (4.3.1)
-    rails-assets-bootstrap-tagsinput (0.8.0)
-      rails-assets-jquery (~> 2.1.1)
-    rails-assets-bootstrap-timepicker (0.1.1)
-    rails-assets-jquery (2.1.4)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
@@ -236,6 +229,9 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    sassc (2.0.1)
+      ffi (~> 1.9)
+      rake
     selenium-webdriver (3.142.3)
       childprocess (>= 0.5, < 2.0)
       rubyzip (~> 1.2, >= 1.2.2)
@@ -282,7 +278,7 @@ PLATFORMS
 DEPENDENCIES
   acts-as-taggable-on (~> 6.0)
   bootsnap (>= 1.1.0)
-  bootstrap4-datetime-picker-rails
+  bootstrap-sass
   byebug
   capybara (>= 2.15)
   carrierwave
@@ -305,9 +301,6 @@ DEPENDENCIES
   pg
   puma (~> 3.11)
   rails (~> 5.2.3)
-  rails-assets-bootstrap!
-  rails-assets-bootstrap-tagsinput!
-  rails-assets-bootstrap-timepicker!
   sass-rails (>= 3.2)
   selenium-webdriver
   spring

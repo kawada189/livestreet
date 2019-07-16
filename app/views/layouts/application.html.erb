@@ -2,11 +2,7 @@
 <html>
   <head>
     <title>Live</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
     <%# toastr file...%>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
@@ -18,8 +14,17 @@
      <%#taginput%>
      <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
      <link rel="stylesheets" type="text/css" href="jquery.tagsinput.css" />
+     
+
+     
+     <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', :debug => true,'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     </head>
   </body>
-  </head>
+  
 
   <body>
   

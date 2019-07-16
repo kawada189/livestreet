@@ -1,17 +1,14 @@
 <div class="jumbotron">
     <div class="row">
-        <div class="container-form col-xs-12 col-sm-6 col-md-6">
+        <div class="col-xs-12 col-sm-12 col-md-6 container-form">
+            <h1>LiveStreetで路上ライブを楽しもう。</h1>
+            <p>おもしろそうなパフォーマンスを見に行こう。</p>
             <p>検索</p>
                 <%= form_tag( posts_url,:method => 'get') do %>
                     <%= text_field_tag :search %>
                     <%= submit_tag 'Search', :name => nil %>
                 <% end %>
             
-        </div>
-
-        <div class="container-catch-copy col-xs-6 col-md-4">
-            <h1>路上ライブ</h1>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a>
         </div>
     </div>
 </div>

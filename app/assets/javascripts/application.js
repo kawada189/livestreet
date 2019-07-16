@@ -15,7 +15,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap 
-//= require bootstrap-timepicker/bootstrap-timepicker 
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
 //= require bootstrap-tagsinput 
 //= require turbolinks
 //= require toastr
