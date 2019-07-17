@@ -1,12 +1,12 @@
 <div class="jumbotron">
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-6 container-form">
+        <div class="col-md-6 col-xs-12 container-form">
             <h1>LiveStreetで路上ライブを楽しもう。</h1>
             <p>おもしろそうなパフォーマンスを見に行こう。</p>
-            <p>検索</p>
-                <%= form_tag( posts_url,:method => 'get') do %>
-                    <%= text_field_tag :search %>
-                    <%= submit_tag 'Search', :name => nil %>
+            <p>エリア、ジャンルなどを入力</p>
+                <%= form_tag( posts_url,:method => 'get', class:'form-group') do %>
+                    <%= text_field_tag :search, '', class: 'form-control' %>
+                    <%= submit_tag '検索', :name => nil, class:'btn btn-primary float-right mt-3 mb-2' %>
                 <% end %>
             
         </div>

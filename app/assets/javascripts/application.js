@@ -16,7 +16,6 @@
 //= require jquery_ujs
 //= require bootstrap 
 //= require jquery3
-//= require popper
 //= require bootstrap-sprockets
 //= require bootstrap-tagsinput 
 //= require turbolinks

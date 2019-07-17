@@ -1,14 +1,15 @@
-@import "bootstrap-sprockets";
+
 @import "bootstrap"; 
 @import "toastr"; 
 
-
+.container-fluid{
+    padding:0px;
+}
 /*header---------------------------------*/
 
 
 #logo {
     float: left;
-    margin-right: 10px;
     font-size: 1.7em;
     color: #fff;
     text-transform: uppercase;
@@ -41,13 +42,18 @@
 }
 
 .container-form{
+
     background-color: white;
+    padding:20px;
+    margin: 20px;
     border-radius: 10px;
 }
 
 .container-form　h1{
     font-weight: bold;
 }
+
+
 
 
 .container-news{
