@@ -14,8 +14,9 @@
      <%#taginput%>
      <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
      <link rel="stylesheets" type="text/css" href="jquery.tagsinput.css" />
-     
 
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
      
      <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -30,8 +31,8 @@
   
     <%= render 'layouts/header' %>
     <%= render 'layouts/notice'%>
-   <div class="container-fluid"> 
+   
     <%= yield %>
-  </div>
+ 
   </body>
 </html>

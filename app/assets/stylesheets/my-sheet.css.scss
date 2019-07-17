@@ -1,13 +1,76 @@
-
 @import "bootstrap"; 
 @import "toastr"; 
 
 .container-fluid{
     padding:0px;
 }
+@media only screen and (max-width:1024px) {
 /*header---------------------------------*/
+    
+#logo {
+    float: left;
+    font-size: 1.7em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding-top: 9px;
+    font-weight: bold;
+  }
+  
+#logo:hover {
+    color: #fff;
+    text-decoration: none;
+  } 
+
+  .navbar-nav a{
+      text-decoration: none;
+      margin-left: 10px; 
+      color: #fff;
+      font-size: 1.3em;
+      font-weight: bold;
+  }
+ 
+  
+
+/*index--------------------------------------*/
+.jumbotron { 
+    height: 100vh;
+    min-height: 300px;
+    background:url(/index-background.jpg) center no-repeat; 
+    background-size: cover;
+}
+
+.container-form{
+    background-color: white;
+    padding:20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.container-form　h1{
+    font-weight: bold;
+}
 
 
+
+
+.container-news{
+    background-color: burlywood;
+    padding:20px;
+}
+
+/*posts:show-----------------------------------------*/
+#mapid {
+    height: 300px;
+    width: 300px
+}
+
+}
+
+
+@media (min-width: 1024px) {
+
+    
 #logo {
     float: left;
     font-size: 1.7em;
@@ -66,4 +129,4 @@
     height: 300px;
     width: 300px
 }
-
+}

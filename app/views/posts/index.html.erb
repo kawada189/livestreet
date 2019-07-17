@@ -1,6 +1,7 @@
+<div class ="container-fluid">
 <div class="jumbotron">
     <div class="row">
-        <div class="col-md-6 col-xs-12 container-form">
+        <div class="col-xs-12 container-form">
             <h1>LiveStreetで路上ライブを楽しもう。</h1>
             <p>おもしろそうなパフォーマンスを見に行こう。</p>
             <p>エリア、ジャンルなどを入力</p>
@@ -15,15 +16,12 @@
 
 <div class="row">
     <% @posts.each do |post| %>
-        <div class="container-news col-xs-12 col-sm-6 col-md-4 ">
-            <p><span><%=link_to post.user.username, post_path(post.id) %>: </span><%=link_to post.title, post_path(post.id) %></p>
-            <p><span>イベント日時: </span><%=link_to post.event_at.strftime('%Y年%m月%d日 %H:%M:%S'), post_path(post.id) %></p>
-            <p><span>場所: </span><%=link_to post.place, post_path(post.id) %></p>
-            <p><span>ジャンル: </span><%=link_to post.genre, post_path(post.id) %></p>
-            <p><span>内容: </span><%=link_to post.contents, post_path(post.id) %></p>
-            <p><span>サムネイル: </span><%=image_tag post.image.to_s %></p>
-            
-            <%#= render 'posts/tag_list', tag_list: post.skill_list %>
+        <div class="container-news text-center col-xs-12 col-sm-6 col-md-4 ">
+            <p><%=image_tag post.image.to_s %></p>
+            <small><%=link_to post.user.username, post_path(post.id) %> / <%=link_to post.genre, post_path(post.id) %> / <%=link_to post.place, post_path(post.id) %> </smalls>
+            <small><%=link_to post.event_at.strftime('%Y年%m月%d日 %H:%M:%S'), post_path(post.id) %></small>
+            <p><span>タイトル： </span><%=link_to post.title, post_path(post.id) %></p>
         </div>
     <% end %>
 </div>  
+</div>
