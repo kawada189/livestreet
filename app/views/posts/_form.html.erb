@@ -6,13 +6,14 @@
     </div>
     <div class="modal-body">
         <%= form_for @post do |f| %>
+           <div class="form-group">
               <p>
                 <%= f.label :title,"タイトル" %>
-                <%= f.text_field :title %>
+                <%= f.text_field :title ,  class:"form-control"%>
               </p>
 
               <p>
-                <%= f.label :event_at,"イベント日時" %>
+                <%= f.label :event_at,"イベント日時" %><br>
                 <%= f.datetime_select :event_at, use_month_numbers: true%>
               </p>
 
@@ -65,7 +66,7 @@
                 '大分県'=>'大分県',
                 '宮崎県'=>'宮崎県',
                 '鹿児島県'=>'鹿児島県',
-                '沖縄県'=>'沖縄県'}  %>
+                '沖縄県'=>'沖縄県'}, class:"form-control"  %>
               </div>
             
               <div class="field">
@@ -76,76 +77,89 @@
                   '大道芸'=>'大道芸',
                   'ダンス'=>'ダンス',
                   'ラップ'=>'ラップ',
-                  'ユニーク'=>'ユニーク'} %>
+                  'ユニーク'=>'ユニーク'}, class:"form-control" %>
               </div>
+
+
             <div class="map_container">
-            <p>詳しい会場位置（マップをクリック）</p>
-            <div id="map"></div>
-            <style type="text/css">
-                #map {
-                  height:300px;
-                  width:300px;
-                }
-              </style>
+              <p>詳しい会場位置（マップをクリック）</p>
+              <div id="map"></div>
+              <style type="text/css">
+                  #map {
+                    height:300px;
+                    width:300px;
+                  }
+                </style>
             </div>
               
 
               <div class="field">
                 <%= f.label :map_lat,"緯度" %><br>
-                <%= f.text_field :map_lat, :id => 'map_latitude'%>
+                <%= f.text_field :map_lat, :id => 'map_latitude', class:"form-control"%>
               </div>
               <div class="field">
                 <%= f.label :map_lon,"経度" %><br>
-                <%= f.text_field :map_lon, :id => 'map_longitude'%>
+                <%= f.text_field :map_lon, :id => 'map_longitude', class:"form-control"%>
               </div>
 
 
               <p>
                 <%= f.label :contents,"内容" %>
-                <%= f.text_area :contents %>
+                <%= f.text_area :contents , class:"form-control"%>
               </p>
 
-              <p>
-                <%= f.label :image,"サムネイル" %><br>
-                <%= f.file_field :image %>
-              </p>
+              <div class="custom-file">
+              <%= f.file_field :image, class:'custom-file-input', id:'customFile' %>
+              <label class="custom-file-label" for="customFile" data-browse="参照">ファイル選択...</label>
+              </div>
 
-
-              <%= f.submit %>
+              <%= f.submit :class=>"btn float-right",if:"custom-file_btn"%>
+              
+              </div>
             <% end %>
 
-              <script>
-              var map, newMarker, markerLocation;
-            $(function(){
-
-                map = L.map('map').setView([35.007091, 135.758367],13);
-
-                L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
-                    maxZoom: 18
-                }).addTo(map);
-                newMarkerGroup = new L.LayerGroup();
-              var theMarker = {};
-
-              map.on('click',function(e){
-                lat = e.latlng.lat;
-                lon = e.latlng.lng;
-
-                    if (theMarker != undefined) {
-                          map.removeLayer(theMarker);
-                    };
-
-                //Add a marker to show where you clicked.
-                theMarker = L.marker([lat,lon]).addTo(map);  
-                document.getElementById('map_latitude').value = lat;
-                document.getElementById('map_longitude').value = lon;
-            });
-
-            });
-
-              </script>
-              </div>
-              </div>
+            </div>
+          </div>
       </div>
     </div>
-  </div>
+  </div> 
+
+  <script>
+    $('.custom-file-input').on('change',function(){
+  $(this).next('.custom-file-label').html($(this)[0].files[0].name);
+})
+  </script>
+  
+  
+  <script>
+  
+ 
+$(function(){
+  var map, newMarker, markerLocation;
+    map = L.map('map').setView([35.007091, 135.758367],13);
+
+    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+        maxZoom: 18
+    }).addTo(map);
+    newMarkerGroup = new L.LayerGroup();
+  
+  var theMarker = {};
+
+  map.on('click',function(e){
+    lat = e.latlng.lat;
+    lon = e.latlng.lng;
+
+        if (theMarker != undefined) {
+              map.removeLayer(theMarker);
+        };
+
+    //Add a marker to show where you clicked.
+    theMarker = L.marker([lat,lon]).addTo(map);  
+    document.getElementById('map_latitude').value = lat;
+    document.getElementById('map_longitude').value = lon;
+});
+
+
+});
+  </script>

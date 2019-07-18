@@ -1,9 +1,11 @@
 @import "bootstrap"; 
+
 @import "toastr"; 
 
 body{
     padding-top: 60px;
 }
+
 @media only screen and (max-width:1024px) {
 /*header---------------------------------*/
     
@@ -41,7 +43,12 @@ body{
       font-weight: bold;
   }
  
-  
+  .custom-file-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+
 
 /*index--------------------------------------*/
 .jumbotron { 
@@ -69,7 +76,19 @@ body{
 .news_icon{
     margin-top:10px;
 }
-
+.custom-file {
+  overflow: hidden;
+}
+.custom-file-label {
+  white-space: nowrap;
+}
+.custom-file-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+#custom-file_btn{
+  margin-top:10px;
+}
 /*posts:show-----------------------------------------*/
 #mapid {
     height: 300px;
@@ -140,11 +159,24 @@ body{
     margin:40px;
 }
 
-
-
+.custom-file {
+  overflow: hidden;
+}
+.custom-file-label {
+  white-space: nowrap;
+}
+.custom-file-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+#custom-file_btn{
+  margin-top:10px;
+}
 /*posts:show-----------------------------------------*/
 #mapid {
     height: 300px;
     width: 300px
 }
+
+
 }
