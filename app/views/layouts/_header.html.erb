@@ -38,11 +38,12 @@
 =end%>
 
 
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+<nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
    <%= link_to "LiveStreet", root_path , id: "logo" %>
   <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="レスポンシブ・ナビゲーションバー">
     <span class="navbar-toggler-icon"></span>
   </button>
+  
    <% if user_signed_in? %>
     <div class="collapse navbar-collapse" id="Navber">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -50,12 +51,15 @@
                  <li class="nav-item active"><%= link_to 'プロフィール変更', edit_user_registration_path %></li>
                  <li class="nav-item active"><%= link_to "Help",   '#' %></li>
                  <li class="nav-item active"> <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-                 <li class="nav-item active">  <%= link_to "新規投稿", new_post_path %></li>
+                 <li class="nav-item active">  <%= link_to "ホーム", root_path %></li>
+                 <li class="nav-item active">  <%= link_to "新規投稿", new_post_path, remote: true, class: "btn btn-lg btn-primary" %></li>
+                 
       </ul>
     </div><!-- /.navbar-collapse -->
     <% else %>
       <div class="collapse navbar-collapse" id="Navber">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">  <%= link_to "ホーム", root_path %></li>
                 <li class="nav-item active"><%= link_to "新規登録",  new_user_registration_path %></li>
                  <li class="nav-item active"><%= link_to "Help",   '#' %></li>
                  <li class="nav-item active"><%= link_to "ログイン", new_user_session_path%></li>

@@ -15,6 +15,7 @@
  </div>
 
 
+
 <div class="row">
      <% @posts.each do |post| %>
         <div class="card text-center col-xs-6 col-sm-3 col-md-2">
@@ -22,7 +23,7 @@
             <p class="card-text"><%= post.user.username %> / <%= post.genre %> / <%= post.place%> </p>
             <p class="card-text"><%= post.event_at.strftime('%Y年%m月%d日 %H:%M:%S') %></p>
             <h4 class="card-title"><span>タイトル：<%= post.title %></h4>
-            <%=link_to "詳細画面", post_path(post.id) ,class: 'btn btn-outline-secondary'%>
+            <%=link_to "詳細画面", post_path(post.id) , class: 'btn btn-outline-secondary'%>
         </div>
      <% end %>
      </div>
