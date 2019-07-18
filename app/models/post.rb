@@ -3,7 +3,7 @@ class Post < ApplicationRecord
     acts_as_taggable
     acts_as_taggable_on :skills, :interests
     mount_uploader :image, ImageUploader
-    validates :event_at, presence: true
+    # validates :event_at, presence: true
 
     def self.search(search) 
         if search

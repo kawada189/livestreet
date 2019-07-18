@@ -3,7 +3,7 @@
 
 <div>
     <p><span><%=@post.user.username%>: </span><%= @post.title%></p>
-    <p><span>イベント日時: </span><%= @post.event_date.strftime('%Y年%m月%d日 %H:%M:%S') %></p>
+    <p><span>イベント日時: </span><%= @post.event_at.strftime('%Y年%m月%d日 %H:%M:%S') %></p>
     <p><span>内容: </span><%= @post.contents %></p>
 </div>
 
