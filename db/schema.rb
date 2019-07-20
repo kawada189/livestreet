@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_14_124613) do
+ActiveRecord::Schema.define(version: 2019_07_20_055956) do
 
   create_table "posts", force: :cascade do |t|
     t.float "user_id"
@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(version: 2019_07_14_124613) do
     t.string "provider"
     t.string "uid"
     t.string "username"
+    t.string "image_url"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

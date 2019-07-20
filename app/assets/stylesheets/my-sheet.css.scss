@@ -3,9 +3,12 @@
 @import "toastr"; 
 
 body{
-    padding-top: 60px;
+    padding-top: 95px;
 }
-
+.container-fluid{
+  margin:0px;
+  padding:0px;
+}
 @media only screen and (max-width:1024px) {
 /*header---------------------------------*/
     
@@ -95,7 +98,42 @@ body{
     width: 300px
 }
 
+/*sign_up----------------------------------------------*/
+.container-fluid{
+  background-color: rgb(226, 226, 226);
 }
+
+.sign_up_form{
+  padding:20px;
+  background-color: white;
+  border-radius: 10px;
+}
+}
+
+
+.shared{
+  margin-top:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media (min-width: 1024px) {
@@ -177,6 +215,19 @@ body{
     height: 300px;
     width: 300px
 }
+/*sign_up----------------------------------------------*/
+.container-fluid{
+  background-color: rgb(226, 226, 226);
+}
 
+.sign_up_form{
+  padding:20px;
+  margin:20px;
+  background-color: white;
+  border-radius: 10px;
+}
+}
 
+.shared{
+  margin-top:10px;
 }
