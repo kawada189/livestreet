@@ -192,8 +192,9 @@ Devise.setup do |config|
   # :time  = Re-enables login after a certain amount of time (see :unlock_in below)
   # :both  = Enables both strategies
   # :none  = No unlock strategy. You should handle unlocking by yourself.
-  # config.unlock_strategy = :both
-  config.omniauth :twitter, "VXDblUsot3knSPcamgYWe3DPc", "7qZtvREhIMkd9fxmlMNK7v2BVqGGKF2Se31RTtA77q8HoXeZLv"
+  # config.unlock_strategy = :both1l
+  # config.omniauth :twitter, "VXDblUsot3knSPcamgYWe3DPc", "7qZtvREhIMkd9fxmlMNK7v2BVqGGKF2Se31RTtA77q8HoXeZLv"
+  config.omniauth :twitter, Rails.application.credentials.twitter[:twitter_api_key], Rails.application.credentials.twitter[:twitter_api_secret], scope: 'email', oauth_callback: "https://livestreet.herokuapp.com/auth/twitter/callback"# config.omniauth :twitter, "VXDblUsot3knSPcamgYWe3DPc", "7qZtvREhIMkd9fxmlMNK7v2BVqGGKF2Se31RTtA77q8HoXeZLv"
   # Number of authentication tries before locking an account if lock_strategy
   # is failed attempts.
   # config.maximum_attempts = 20
