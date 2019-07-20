@@ -304,6 +304,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activestorage
   acts-as-taggable-on (~> 6.0)
   aws-sdk-s3
   bootsnap (>= 1.1.0)
