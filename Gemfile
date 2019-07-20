@@ -51,6 +51,7 @@ gem 'acts-as-taggable-on', '~> 6.0'
 gem 'carrierwave'
 gem 'fog-aws'
 
+gem "aws-sdk-s3", require: false
 gem 'mini_magick'
 
 
