@@ -51,7 +51,6 @@ gem 'acts-as-taggable-on', '~> 6.0'
 gem 'carrierwave'
 gem 'fog-aws'
 
-
 gem 'mini_magick'
 
 
