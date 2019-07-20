@@ -2,7 +2,8 @@ class Post < ApplicationRecord
     belongs_to :user 
     acts_as_taggable
     acts_as_taggable_on :skills, :interests
-    mount_uploader :image, ImageUploader
+    # mount_uploader :image, ImageUploader
+    has_one_attached :image
     # validates :event_at, presence: true
 
     def self.search(search) 
