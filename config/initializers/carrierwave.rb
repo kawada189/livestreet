@@ -13,7 +13,6 @@ CarrierWave.configure do |config|
       aws_access_key_id: 'AKIAUGFDMTKPJXZ3ARWW',
       aws_secret_access_key: '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',
       region: 'ap-northeast-1'
-      path_style: true
     }
     
     config.fog_public     = false 
